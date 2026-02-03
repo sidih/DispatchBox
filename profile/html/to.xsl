@@ -42,7 +42,7 @@
    <xsl:param name="outputDir">docs/</xsl:param>
 
    <xsl:param name="homeLabel">Home</xsl:param>
-   <xsl:param name="homeURL">/index.html</xsl:param>
+   <xsl:param name="homeURL">https://sidih.github.io/DispatchBox/</xsl:param>
 
    <!-- Iz datoteke ../../../../publikacije-XSLT/sistory/html5-foundation6-chs/my-html_param.xsl -->
    <xsl:param name="title-bar-sticky">false</xsl:param>
