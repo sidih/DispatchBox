@@ -1,0 +1,75 @@
+
+/* Master styles */
+
+
+/* h2 {
+  color: #8e130b;
+  text-decoration: none;
+} */
+
+/* primarni font naj bo Roboto, ostalo isto */
+
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.tipue_search_button {
+  width: 100px;
+  height: 37px;
+  border: 0;
+  border-radius: 1px;
+  background: #8e130b url(search.png) no-repeat center;
+  outline: none;
+}
+
+/* loader */
+.preloader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #8e130b;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.vertical-menu {
+    max-height:200px;
+    overflow-y: auto; 
+ }
+
+ .show-for-large{
+    cursor: -moz-zoom-in;
+    /* cursor: -webkit-zoom-in; */
+    cursor: zoom-in;
+}
+
+h5{
+  color: #6b6b6b;
+}
