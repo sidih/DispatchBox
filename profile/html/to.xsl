@@ -41,7 +41,7 @@
    <!-- Iz datoteke ../../../../publikacije-XSLT/sistory/html5-foundation6-chs/to.xsl -->
    <xsl:param name="outputDir">docs/</xsl:param>
 
-   <xsl:param name="homeLabel">Home</xsl:param>
+   <xsl:param name="homeLabel"></xsl:param>
    <xsl:param name="homeURL">https://sidih.github.io/DispatchBox/</xsl:param>
 
    <!-- Iz datoteke ../../../../publikacije-XSLT/sistory/html5-foundation6-chs/my-html_param.xsl -->
@@ -121,6 +121,24 @@
          h5{
          color: #6b6b6b;
          }
+         .is-dropdown-submenu {
+         width: max-content;
+         min-width: 12rem;     
+         max-width: 20rem;
+         }
+         .fi-home:before{
+         padding-top: .3rem;
+         padding-right: 1rem;
+         font-size: 28px;
+         }
+         
+         .chapter {
+         margin-top: 3rem;
+         }
+         
+         .subchapter {
+         margin-top: 3rem;
+         }
          
       </style>
    </xsl:template>
@@ -187,7 +205,7 @@
          <img class="imageviewer" style="height:600px;"
             src="{tei:graphic[contains(@url,'normal')]/@url}"
             data-high-res-src="{tei:graphic[1]/@url}" alt="{tei:head}"/>
-         <figcaption style="font-size:8pt">
+         <figcaption style="font-size:10pt">
             <br/>
             <xsl:apply-templates select="tei:head[1]"/>
             <br/>
@@ -205,7 +223,7 @@
          <img class="imageviewer" style="height:200px;"
             src="{tei:graphic[contains(@url,'normal')]/@url}"
             data-high-res-src="{tei:graphic[1]/@url}" alt="{tei:head}"/>
-         <figcaption style="font-size:8pt">
+         <figcaption style="font-size:10pt">
             <br/>
             <xsl:apply-templates select="tei:head[1]"/>
             <br/>
@@ -223,7 +241,7 @@
          <img class="imageviewer" style="width:450px;"
             src="{tei:graphic[contains(@url,'normal')]/@url}"
             data-high-res-src="{tei:graphic[1]/@url}" alt="{tei:head}"/>
-         <figcaption style="font-size:8pt">
+         <figcaption style="font-size:10pt">
             <br/>
             <xsl:apply-templates select="tei:head[1]"/>
             <br/>
@@ -232,6 +250,22 @@
       </figure>
       <br/>
    </xsl:template>
+   
+   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
+      <desc>imageviewer_table - Slike tabel, naslov naj bo nad tabelo, še vseeno vključena možnost povečanja slike z imageviewer</desc>
+   </doc>
+   <xsl:template match="tei:figure[@rend = 'imageviewer_table']">
+      <figure id="{@xml:id}">
+         <figcaption style="font-style:italic; font-weight:700">
+            <xsl:apply-templates select="tei:head"/>
+         </figcaption>
+         <img class="imageviewer" style="width:450px;"
+            src="{tei:graphic[contains(@url,'normal')]/@url}"
+            data-high-res-src="{tei:graphic[1]/@url}" alt="{tei:head}"/>
+      </figure>
+      <br/>
+   </xsl:template>
+
 
    <xsldoc:doc xmlns:xsldoc="http://www.oxygenxml.com/ns/doc/xsl">
       <xsldoc:desc>Dodam zaključni javascript za ImageViewer</xsldoc:desc>
@@ -573,5 +607,200 @@
          <xsl:apply-templates/>
       </a>
    </xsl:template>-->
+   
+   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
+      <desc>Ni ločil med avtorji pri navedbi licence ma cip strani. Dodal tudi v myi18n besedo "in" čisto na koncu</desc>
+   </doc>
+   <xsl:template match="tei:licence" mode="kolofon">
+      <!-- dodaj še ostale možne licence -->
+      <xsl:if test="contains(.,'/by-nc-nd/4.0/')">
+         <p>
+            <a rel="license" href="{.}">
+               <img alt="Creative Commons licenca" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+            </a>
+            <br />
+            <xsl:sequence select="tei:i18n('by-nc-nd/4.0 text 1')"/><xsl:text> </xsl:text>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" rel="dct:type">
+               <xsl:sequence select="tei:i18n('by-nc-nd/4.0 text 2')"/>
+            </span>
+            <xsl:if test="ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author">
+               <xsl:text> </xsl:text>
+               <xsl:sequence select="tei:i18n('by-nc-nd/4.0 text 3')"/>
+               <xsl:text> </xsl:text>
+               <a xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName" rel="cc:attributionURL" href="{ancestor::tei:publicationStmt/tei:pubPlace/tei:ref}">
+                  <!-- SPREMENIL: Poiščem avtorje.
+                         Imena in priimki ločeni s presledkom, avtorji z vejico -->
+                  <xsl:for-each select="ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:author">
+                     <xsl:choose>
+                        <xsl:when test="position() = 1"/>
+                        <xsl:when test="position() = last()">
+                          <xsl:text>  </xsl:text>
+                          <xsl:sequence select="tei:i18n('In')"/>
+                          <xsl:text>  </xsl:text>                           
+                        </xsl:when>
+                        <xsl:otherwise>
+                           <xsl:text>, </xsl:text>
+                        </xsl:otherwise>
+                     </xsl:choose>
+                     
+                     <!-- ime avtorja in nato presledek pred priimkom-->
+                     <xsl:for-each select="tei:forename">
+                        <xsl:value-of select="."/>
+                        <xsl:text> </xsl:text>
+                     </xsl:for-each>
+                     
+                     <xsl:value-of select="tei:surname"/>
+                  </xsl:for-each>
+               </a>
+            </xsl:if>
+            <xsl:text> </xsl:text>
+            <xsl:sequence select="tei:i18n('by-nc-nd/4.0 text 4')"/>
+            <xsl:text> </xsl:text>
+            <a rel="license" href="{.}">
+               <xsl:sequence select="tei:i18n('by-nc-nd/4.0 text 5')"/>
+            </a>
+         </p>
+      </xsl:if>
+   </xsl:template>
+   
+   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
+      <desc></desc>
+      <param name="thisChapter-id"></param>
+      <param name="thisLanguage"></param>
+   </doc>
+   <xsl:template name="html-header">
+      <xsl:param name="thisChapter-id"/>
+      <xsl:param name="thisLanguage"/>
+      <header>
+         <div class="hide-for-large">
+            <xsl:if test="$title-bar-sticky = 'true'">
+               <xsl:attribute name="data-sticky-container"/>
+            </xsl:if>
+            <div id="header-bar">
+               <xsl:if test="$title-bar-sticky = 'true'">
+                  <xsl:attribute name="data-sticky"/>
+                  <xsl:attribute name="data-sticky-on">small</xsl:attribute>
+                  <xsl:attribute name="data-options">marginTop:0;</xsl:attribute>
+                  <xsl:attribute name="style">width:100%</xsl:attribute>
+                  <xsl:attribute name="data-top-anchor">1</xsl:attribute>
+               </xsl:if>
+               <div class="title-bar" data-responsive-toggle="publication-menu" data-hide-for="large">
+                  <button class="menu-icon" type="button" data-toggle=""></button>
+                  <div class="title-bar-title">
+                     <xsl:choose>
+                        <xsl:when test="$languages-locale='true'">
+                           <xsl:call-template name="myi18n-lang">
+                              <xsl:with-param name="word">Menu</xsl:with-param>
+                              <xsl:with-param name="thisLanguage" select="$thisLanguage"/>
+                           </xsl:call-template>
+                        </xsl:when>
+                        <xsl:otherwise>
+                           <xsl:sequence select="tei:i18n('Menu')"/>
+                        </xsl:otherwise>
+                     </xsl:choose>
+                  </div>
+                  <div class="title-bar-right">
+                     <a class="title-bar-title" href="{$homeURL}">
+                        <i class="fi-home" style="color:white;"></i>
+                     </a>
+                  </div>
+                  <div id="publication-menu" class="hide-for-large">
+                     <ul class="vertical menu" data-drilldown="" data-options="backButton: &lt;li class=&quot;js-drilldown-back&quot;&gt;&lt;a tabindex=&quot;0&quot;&gt;{tei:i18n('Nazaj')}&lt;/a&gt;&lt;/li&gt;;">
+                        <xsl:call-template name="title-bar-list-of-contents">
+                           <xsl:with-param name="title-bar-type">vertical</xsl:with-param>
+                           <xsl:with-param name="thisChapter-id" select="$thisChapter-id"/>
+                           <xsl:with-param name="thisLanguage" select="$thisLanguage"/>
+                        </xsl:call-template>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <div class="show-for-large">
+            <xsl:if test="$title-bar-sticky = 'true'">
+               <xsl:attribute name="data-sticky-container"/>
+            </xsl:if>
+            <nav class="title-bar">
+               <xsl:if test="$title-bar-sticky = 'true'">
+                  <xsl:attribute name="data-sticky"/>
+                  <xsl:attribute name="data-options">marginTop:0;</xsl:attribute>
+                  <xsl:attribute name="style">width:100%</xsl:attribute>
+                  <xsl:attribute name="data-top-anchor">1</xsl:attribute>
+               </xsl:if>
+               <div class="title-bar-right">
+                  <a class="title-bar-title" href="{$homeURL}">
+                     <i class="fi-home" style="color:white;"></i>
+                     <xsl:text> </xsl:text>
+                     <span>
+                        <xsl:value-of select="$homeLabel"/>
+                     </span>
+                  </a>
+               </div>
+               <div class="title-bar-left">
+                  <ul class="dropdown menu" data-dropdown-menu="">
+                     <xsl:call-template name="title-bar-list-of-contents">
+                        <xsl:with-param name="title-bar-type">dropdown</xsl:with-param>
+                        <xsl:with-param name="thisChapter-id" select="$thisChapter-id"/>
+                        <xsl:with-param name="thisLanguage" select="$thisLanguage"/>
+                     </xsl:call-template>
+                  </ul>
+               </div>
+            </nav>
+         </div>
+         
+         <!-- iskalnik -->
+         <xsl:if test="ancestor-or-self::tei:TEI/tei:text/tei:front/tei:divGen[@type='search']">
+            <xsl:choose>
+               <xsl:when test="$languages-locale='true'">
+                  <xsl:variable name="sistoryPath-search">
+                     <xsl:if test="$chapterAsSIstoryPublications='true'">
+                        <xsl:call-template name="sistoryPath">
+                           <xsl:with-param name="chapterID" select="ancestor-or-self::tei:TEI/tei:text/tei:front/tei:divGen[@type='search'][@xml:lang=$thisLanguage]/@xml:id"/>
+                        </xsl:call-template>
+                     </xsl:if>
+                  </xsl:variable>
+                  <form action="{concat($sistoryPath-search,ancestor-or-self::tei:TEI/tei:text/tei:front/tei:divGen[@type='search'][@xml:lang=$thisLanguage]/@xml:id,'.html')}">
+                     <div class="row collapse">
+                        <div class="small-10 large-11 columns">
+                           <input type="text" name="q" id="tipue_search_input">
+                              <xsl:attribute name="placeholder">
+                                 <xsl:call-template name="myi18n-lang">
+                                    <xsl:with-param name="word">Search placeholder</xsl:with-param>
+                                    <xsl:with-param name="thisLanguage" select="$thisLanguage"/>
+                                 </xsl:call-template>
+                              </xsl:attribute>
+                           </input>
+                        </div>
+                        <div class="small-2 large-1 columns">
+                           <img type="button" class="tipue_search_button"/>
+                        </div>
+                     </div>
+                  </form>
+               </xsl:when>
+               <xsl:otherwise>
+                  <xsl:variable name="sistoryPath-search">
+                     <xsl:if test="$chapterAsSIstoryPublications='true'">
+                        <xsl:call-template name="sistoryPath">
+                           <xsl:with-param name="chapterID" select="ancestor-or-self::tei:TEI/tei:text/tei:front/tei:divGen[@type='search']/@xml:id"/>
+                        </xsl:call-template>
+                     </xsl:if>
+                  </xsl:variable>
+                  <form action="{concat($sistoryPath-search,ancestor-or-self::tei:TEI/tei:text/tei:front/tei:divGen[@type='search']/@xml:id,'.html')}">
+                     <div class="row collapse">
+                        <div class="small-10 large-11 columns">
+                           <input type="text" name="q" id="tipue_search_input" placeholder="{tei:i18n('Search placeholder')}"/>
+                        </div>
+                        <div class="small-2 large-1 columns">
+                           <img type="button" class="tipue_search_button"/>
+                        </div>
+                     </div>
+                  </form>
+               </xsl:otherwise>
+            </xsl:choose>
+         </xsl:if>
+      </header>
+   </xsl:template>
+   
    
 </xsl:stylesheet>

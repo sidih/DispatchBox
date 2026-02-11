@@ -22,10 +22,10 @@
             <respStmt>
                <resp>Reviewers</resp>
                <name>Vojko Gorjanc</name>
-               <name>Ana Yara Postigo Fuentes</name>
+               <name>Ana Yara Postigo Fuentes</name><!--
                <name>Tomaž Erjavec</name>
                <name>Petya Osenova</name>
-               <name>Katja Meden</name>
+               <name>Katja Meden</name>-->
             </respStmt>
             <respStmt>
                <resp>TEI Encoding</resp>
@@ -276,13 +276,18 @@
                   discourse – both across time and across different parliaments. In addition, they
                   furnish valuable material for uncovering communication strategies and deliberation
                   techniques, shedding light on how parliamentary discourse both mirrors and
-                  actively shapes the social world. </p>
+                  actively shapes the social world. </p><lb/>
                <div type="subchapter" xml:id="ch01.1.1">
                   <head xml:id="DispatchBox-head-10">Further reading</head>
-                  <p style="text-align:justify" xml:id="DispatchBox-p-14">Some concrete examples of using parliamentary data
-                     in SSH research are provided in overviews (<ref target="#Skubic_2022a">Skubic &amp; Fišer, 2022a</ref>, <ref target="#Skubic_2022b">2022b</ref>,
-                        <ref target="#Skubic_2024">2024</ref>; <ref target="#Abercrombie_2020">Abercrombie &amp; Batista-Navarro,
-                        2020</ref>), academic papers (<ref target="#Kryvenko_2025a">Kryvenko, 2025a</ref>, <ref target="#Kryvenko_2025b">2025b</ref>) and edited volumes (<ref target="#Ihalainen_2016">Ihalainen, Palonen &amp; Ilie, 2016</ref>; <ref target="#Bayley_2004">Bayley, 2004</ref>).</p>
+                  <p style="text-align:justify" xml:id="DispatchBox-p-14">Some concrete examples of
+                     using parliamentary data in SSH research are provided in overviews (<ref
+                        target="#Skubic_2022a">Skubic &amp; Fišer, 2022a</ref>, <ref
+                        target="#Skubic_2022b">2022b</ref>, <ref target="#Skubic_2024">2024</ref>;
+                        <ref target="#Abercrombie_2020">Abercrombie &amp; Batista-Navarro,
+                        2020</ref>), academic papers (<ref target="#Kryvenko_2025a">Kryvenko,
+                        2025a</ref>, <ref target="#Kryvenko_2025b">2025b</ref>) and edited volumes
+                        (<ref target="#Ihalainen_2016">Ihalainen, Palonen &amp; Ilie, 2016</ref>;
+                     <ref target="#Bayley_2004">Bayley, 2004</ref>).</p>
                </div>
             </div>
             <div type="subchapter" xml:id="ch01.2">
@@ -300,7 +305,7 @@
                   speeches within their political and institutional environments and reflecting on
                   the nature of the data itself, researchers can avoid reductive conclusions and
                   more fully harness the analytical potential of parliamentary corpora for SSH
-                  research.</p>               
+                  research.</p>         
                <div type="subchapter" xml:id="ch01.2.1">
                   <head xml:id="DispatchBox-head-12">Source data</head>
                   <p style="text-align:justify" xml:id="DispatchBox-p-16">Parliamentary transcripts constitute a rich yet
@@ -342,8 +347,8 @@
                         &amp; Pirker, 2018</ref>), the Czech Chamber of
                         Deputies (<ref target="#Kopp_2021">Kopp et al.,2021</ref>), the Parliament
                         of Iceland, or Althingi (<ref target="#Steingrímsson_2020">Steingrímsson et al., 2020</ref>), and the Vekhovna Rada of
-                        Ukraine (<ref target="#KryvenkoKopp_2023">Kryvenko and Kopp, 2023</ref>).</p>
-                  </div>
+                        Ukraine (<ref target="#KryvenkoKopp_2023">Kryvenko and Kopp, 2023</ref>).</p>             
+                  </div>    
                </div>
                <div type="subchapter" xml:id="ch01.2.2">
                   <head xml:id="DispatchBox-head-14">Parliamentary proceedings as evidence of parliamentary activity</head>
@@ -576,7 +581,7 @@
                         Catalan, Basque and Galician autonomous regions.</note> and 30 different
                   languages between 2015 and mid-2022. Several national ParlaMint corpora, however,
                   contain data spanning a much longer period (see Table 1).</p>
-               <figure xml:id="table1" rend="imageviewer1" type="table">
+               <figure xml:id="table1" rend="imageviewer_table" type="table">
                   <head>Table 1. ParlaMint language and time coverage. (Adapted from: <ref target="#Erjavec_2025">Erjavec et
                      al., 2025</ref>)</head>
                   <graphic url="image3.png"/>
@@ -1940,28 +1945,23 @@
                   <div type="subchapter" xml:id="ch01.4.2.16">
                      <head xml:id="DispatchBox-head-73">Named entities</head>
                      <p style="text-align:justify" xml:id="DispatchBox-p-99">
-                        <ref target="#Named_entity">
-                           <hi rend="bold">Named
-                              entity recognition</hi>
-                        </ref>
-                        <hi rend="bold">/annotation (NER) enables
-                           researchers to identify references to various unique (individual or
-                           collective) entities</hi> in the data and analyse, for example, potential
-                        networks, centres of special interest or power, cross-references between
-                        debates, etc. As shown in Figure 28, named entities are encoded in ParlaMint
-                        as a separate structure retaining one metadata category, i.e. <hi rend="italic">type</hi>, with the four standard values (<ref target="#TjongKimSang_2003">Tjong Kim Sang
-                        &amp; De Meulder, 2003</ref>) – <hi rend="bold">organisation (</hi>
-                        <hi rend="italic bold">ORG</hi>
-                        <hi rend="bold">), person (</hi>
-                        <hi rend="italic bold">PER</hi>
-                        <hi rend="bold">), location (</hi>
-                        <hi rend="italic bold">LOC</hi>
-                        <hi rend="bold">) and miscellaneous (</hi>
-                        <hi rend="italic bold">MISC</hi>
-                        <hi rend="bold">)</hi> where the latter
-                        refers to any named entity that does not belong to any of the previous three
-                        classes, such as Dispatch Box, Nationality and Borders Act or
-                        Shakespearean/Wagnerian (examples taken from ParlaMint-GB).</p>
+                        <hi rend="bold"><ref target="#Named_entity"> Named entity recognition</ref>
+                           / annotation (NER) enables researchers to identify references to various
+                           unique (individual or collective) entities</hi> in
+                        the data and analyse, for example, potential networks, centres of special
+                        interest or power, cross-references between debates, etc. As shown in Figure
+                        28, named entities are encoded in ParlaMint as a separate structure
+                        retaining one metadata category, i.e. <hi rend="italic">type</hi>, with the
+                        four standard values (<ref target="#TjongKimSang_2003">Tjong Kim Sang &amp;
+                           De Meulder, 2003</ref>) – <hi rend="bold">organisation (</hi><hi
+                           rend="italic bold">ORG</hi><hi rend="bold">), person (</hi><hi
+                           rend="italic bold">PER</hi><hi rend="bold">), location (</hi><hi
+                           rend="italic bold">LOC</hi><hi rend="bold">) and miscellaneous (</hi><hi
+                           rend="italic bold">MISC</hi>
+                        <hi rend="bold">)</hi> where the latter refers to any named entity that does
+                        not belong to any of the previous three classes, such as Dispatch Box,
+                        Nationality and Borders Act or Shakespearean/Wagnerian (examples taken from
+                        ParlaMint-GB).</p>
                      <figure xml:id="figure28" rend="imageviewer">
                         <graphic url="image29.png"/>
                         <graphic url="image29-normal.png"/>
@@ -2681,13 +2681,13 @@
                         often in men’s speeches. Yet the absolute counts also show that, despite
                         this difference, <hi rend="italic">Macroeconomics </hi>remains a major theme
                         in the regularMP_F subcorpus, ranking second overall.</p>
-                     <figure xml:id="table3" rend="imageviewer" type="table">
+                     <figure xml:id="table3" rend="imageviewer_table" type="table">
                         <head>Table 3. Predominant topics in women’s speeches, based on the ratio of
                            relative token frequencies.</head>
                         <graphic url="image42.png"/>
                         <graphic url="image42-normal.png"/>
                      </figure>
-                     <figure xml:id="table4" rend="imageviewer" type="table">
+                     <figure xml:id="table4" rend="imageviewer_table" type="table">
                         <head>Table 4. Predominant topics in men’s speeches, based on the ratio of
                            relative token frequencies.</head>
                         <graphic url="image43.png"/>
@@ -3395,7 +3395,7 @@
                               women who are more often affected by rheumatic disorders and multiple
                               sclerosis. There are women who get heart attacks, but have symptoms
                               other than men, and we need to know more about that.</hi>”
-                           (ParlaMint-NO, &gt;Kristin Ørmen Johnsen, 2021)</quote>
+                           (ParlaMint-NO, Kristin Ørmen Johnsen, 2021)</quote>
                         <table xml:id="table7" type="table">
                            <head>Table 7. The top 10 key lemmas in the health_F subcorpus with tags
                               (translation errors excluded). </head>
@@ -4756,8 +4756,7 @@
                   <term xml:id="Token">
                      <hi rend="bold">Token</hi>
                   </term>
-                  <gloss> is the smallest unit in a corpus, which can be a wordform, a punctuation
-                     mark or a digit. </gloss>
+                  <gloss> is a single occurrence of a running unit in a corpus, which may be a wordform, a punctuation mark, a digit, or another element between spaces, depending on the tokeniser used.</gloss>
                </item>
                <lb/>
             </list>
