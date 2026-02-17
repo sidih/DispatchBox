@@ -99,10 +99,13 @@
             color: black;
          }</style>
       <style>
-         dt + dd::before {
+         /*dt + dd::before {
             content: "\2022" " ";
-         }
+         }*/
          
+         dt + dd::before {
+         content: none;
+         }              
          .tipue_search_button {
          width: 100px;
          height: 37px;
@@ -110,36 +113,31 @@
          border-radius: 1px;
          background: #8e130b url(search.png) no-repeat center;
          outline: none;
-         }
-         
-         .imageviewer{
+         }         
+         .imageviewer {
          cursor: -moz-zoom-in; 
          cursor: -webkit-zoom-in; 
          cursor: zoom-in;
-         }
-         
-         h5{
+         }         
+         h5 {
          color: #6b6b6b;
          }
          .is-dropdown-submenu {
          width: max-content;
          min-width: 12rem;     
          max-width: 20rem;
-         }
-         .fi-home:before{
+         }         
+         .fi-home:before {
          padding-top: .3rem;
          padding-right: 1rem;
          font-size: 28px;
-         }
-         
+         }         
          .chapter {
          margin-top: 3rem;
-         }
-         
+         }         
          .subchapter {
          margin-top: 3rem;
-         }
-         
+         }         
       </style>
    </xsl:template>
    <xsldoc:doc xmlns:xsldoc="http://www.oxygenxml.com/ns/doc/xsl">
