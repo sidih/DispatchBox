@@ -102,7 +102,10 @@
          /*dt + dd::before {
             content: "\2022" " ";
          }*/
-         
+         dt, dd {
+         display: block;
+         margin-block: -5px;
+         }
          dt + dd::before {
          content: none;
          }              
@@ -122,6 +125,10 @@
          h5 {
          color: #6b6b6b;
          }
+         #DispatchBox-head-10 {
+         font-size: 20px;
+         color: #6b6b6b;
+         }         
          .is-dropdown-submenu {
          width: max-content;
          min-width: 12rem;     
@@ -137,6 +144,9 @@
          }         
          .subchapter {
          margin-top: 3rem;
+         } 
+         #table2 tr:nth-child(even) {
+         background-color: transparent;
          }         
       </style>
    </xsl:template>
@@ -232,6 +242,24 @@
    </xsl:template>
    
    <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
+      <desc>imageviewer2a - width 150px - Slike, ki imajo vključeno možnost povečanja slike z imageviewer</desc>
+   </doc>
+   <xsl:template match="tei:figure[@rend = 'imageviewer2a']">
+      <figure id="{@xml:id}">
+         <img class="imageviewer" style="width:150px;"
+            src="{tei:graphic[contains(@url,'normal')]/@url}"
+            data-high-res-src="{tei:graphic[1]/@url}" alt="{tei:head}"/>
+         <figcaption style="font-size:10pt">
+            <br/>
+            <xsl:apply-templates select="tei:head[1]"/>
+            <br/>
+            <xsl:apply-templates select="tei:head[2]"/>
+         </figcaption>
+      </figure>
+      <br/>
+   </xsl:template>
+   
+   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
       <desc>imageviewer3 - width:450px - Slike, ki imajo vključeno možnost povečanja slike z imageviewer</desc>
    </doc>
    <xsl:template match="tei:figure[@rend = 'imageviewer3']">
@@ -248,7 +276,41 @@
       </figure>
       <br/>
    </xsl:template>
+   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
+      <desc>imageviewer4 - width:250px - Slike, ki imajo vključeno možnost povečanja slike z imageviewer</desc>
+   </doc>
+   <xsl:template match="tei:figure[@rend = 'imageviewer4']">
+      <figure id="{@xml:id}">
+         <img class="imageviewer" style="width:350px;"
+            src="{tei:graphic[contains(@url,'normal')]/@url}"
+            data-high-res-src="{tei:graphic[1]/@url}" alt="{tei:head}"/>
+         <figcaption style="font-size:10pt">
+            <br/>
+            <xsl:apply-templates select="tei:head[1]"/>
+            <br/>
+            <xsl:apply-templates select="tei:head[2]"/>
+         </figcaption>
+      </figure>
+      <br/>
+   </xsl:template>
    
+   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
+      <desc>imageviewer4 - width:900px - Slike, ki imajo vključeno možnost povečanja slike z imageviewer</desc>
+   </doc>
+   <xsl:template match="tei:figure[@rend = 'imageviewer5']">
+      <figure id="{@xml:id}">
+         <img class="imageviewer" style="width:900px;"
+            src="{tei:graphic[contains(@url,'normal')]/@url}"
+            data-high-res-src="{tei:graphic[1]/@url}" alt="{tei:head}"/>
+         <figcaption style="font-size:10pt">
+            <br/>
+            <xsl:apply-templates select="tei:head[1]"/>
+            <br/>
+            <xsl:apply-templates select="tei:head[2]"/>
+         </figcaption>
+      </figure>
+      <br/>
+   </xsl:template>
    <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
       <desc>imageviewer_table - Slike tabel, naslov naj bo nad tabelo, še vseeno vključena možnost povečanja slike z imageviewer</desc>
    </doc>
@@ -467,7 +529,8 @@
    </xsldoc:doc>
    <xsl:template match="tei:titlePage">
       <!-- avtor -->
-      <!--<p  class="naslovnicaAvtor">
+      <br/>
+      <p  class="naslovnicaAvtor">
          <xsl:for-each select="tei:docAuthor">
             <xsl:choose>
                <xsl:when test="tei:forename or tei:surname">
@@ -496,7 +559,7 @@
             </xsl:if>
          </xsl:for-each>
       </p>
-      <br/>
+      <!--<br/>
       <!-\- naslov: spremenjeno procesiranje naslovov -\->
       <xsl:for-each select="tei:docTitle/tei:titlePart[@xml:lang='en']">
          <h1 class="text-center"><xsl:value-of select="."/></h1>
@@ -526,7 +589,7 @@
             <p>
                <img src="{tei:graphic[1]/@url}" alt="naslovna slika" style="max-height: 800px;"/>
             </p>
-            <p>Source: <a href="http://espreso.tv/" rel="noopener" target="_blank">espreso.tv</a></p>
+            <p>Image source: <a href="http://espreso.tv/" rel="noopener" target="_blank">espreso.tv</a></p>
             <p>
                <a href="https://inz.si/" target="_blank" rel="noopener"><img src="{tei:graphic[2]/@url}" alt="logo INZ" style="max-width: 250px;"></img></a>
             </p>

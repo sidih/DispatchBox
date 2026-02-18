@@ -110,10 +110,10 @@
                <titlePart xml:lang="en">unlocking the potential of ParlaMint through noSketch Engine
                   and TEITOK</titlePart>
             </docTitle>
-            <docAuthor>Kristina Pahor de Maiti Tekavčič, Faculty of Arts University of Ljubljana,
+            <docAuthor><forename>Kristina</forename> <surname>Pahor de Maiti Tekavčič</surname>, Faculty of Arts University of Ljubljana,
                Institute of Contemporary History, Slovenia <ref target="https://orcid.org/0000-0002-5678-0881">https://orcid.org/0000-0002-5678-0881</ref>
             </docAuthor>
-            <docAuthor>Anna Kryvenko, Institute of Contemporary History, Slovenia and NISS, Ukraine
+            <docAuthor><forename>Anna</forename> <surname>Kryvenko</surname>, Institute of Contemporary History, Slovenia and NISS, Ukraine
                   <ref target="https://orcid.org/0000-0001-6414-7456">https://orcid.org/0000-0001-6414-7456</ref>
             </docAuthor>
             <graphic url="naslovnica.png"/>
@@ -137,9 +137,9 @@
          <divGen type="toc" xml:id="tables" xml:lang="en">
             <head>List of Tables</head>
          </divGen>
-         <divGen type="search" xml:id="search" xml:lang="en">
+         <!--<divGen type="search" xml:id="search" xml:lang="en">
             <head>Search</head>
-         </divGen>
+         </divGen>-->
          <div type="preface" xml:id="preface_1" xml:lang="en">
             <head xml:id="DispatchBox-head-6">Introduction</head>
             <p style="text-align:justify" xml:id="DispatchBox-p-5">This digital textbook aims to provide a step-by step
@@ -276,7 +276,7 @@
                   discourse – both across time and across different parliaments. In addition, they
                   furnish valuable material for uncovering communication strategies and deliberation
                   techniques, shedding light on how parliamentary discourse both mirrors and
-                  actively shapes the social world. </p><lb/>
+                  actively shapes the social world. </p>
                <div type="subchapter" xml:id="ch01.1.1">
                   <head xml:id="DispatchBox-head-10">Further reading</head>
                   <p style="text-align:justify" xml:id="DispatchBox-p-14">Some concrete examples of
@@ -1230,7 +1230,7 @@
                         almost 230 thousand documents in ParlaMint-PL which refer to speeches and
                         which are composed of more than 35 million words and some 10 million more
                            <ref target="#Token">tokens</ref>.</p>
-                     <figure xml:id="figure11" rend="imageviewer">
+                     <figure xml:id="figure11" rend="imageviewer4">
                         <graphic url="image12.png"/>
                         <graphic url="image12-normal.png"/>
                         <head>Figure 11. Structural elements in ParlaMint-PL. (<ref target="https://www.clarin.si/ske/#dashboard?corpname=parlamint50_pl&amp;corp_info=1">source</ref>)</head>
@@ -1331,7 +1331,7 @@
                         (non-repetitive) vocabulary used in ParlaMint-PL is actually smaller than
                         the 320 thousand words just mentioned, since the <hi rend="italic">lemma</hi> element tells us that there are only around 90 thousand
                         unique units used in the corpus.</p>
-                     <figure xml:id="figure13" rend="imageviewer">
+                     <figure xml:id="figure13" rend="imageviewer4">
                         <graphic url="image14.png"/>
                         <graphic url="image14-normal.png"/>
                         <head>Figure 13. Linguistic elements in ParlaMint-PL. (<ref target="https://www.clarin.si/ske/#dashboard?corpname=parlamint50_pl&amp;corp_info=1">source</ref>)</head>
@@ -1796,10 +1796,10 @@
                         on this foundation, the <ref target="https://huggingface.co/classla/xlm-r-parlasent"> ParlaSent
                            model</ref> was developed, offering a deep learning approach to
                         multilingual sentiment analysis within the parliamentary domain.</p>
-                     <table type="table" xml:id="table2">
+                     <table rend="rules" type="table" xml:id="table2">
                         <head>Table 2. Six-level sentiment annotation schema and its reduction to
-                           three levels (<ref target="https://aclanthology.org/2024.lrec-main.1393/">Mochtak</ref>
-                           <ref target="https://aclanthology.org/2024.lrec-main.1393/">, Rupnik and
+                           three levels (<ref target="https://aclanthology.org/2024.lrec-main.1393/">Mochtak</ref>,
+                            <ref target="https://aclanthology.org/2024.lrec-main.1393/">Rupnik and
                               Ljubešić (2024</ref>), <ref target="https://doi.org/10.1371/journal.pone.0242050">Batanović et al.
                               (2020</ref>)).</head>
                         <row>
@@ -2899,7 +2899,7 @@
                            <item>To change the focus and reference subcorpus, and therefore, to
                               obtain <ref target="https://www.clarin.si/skelog/#keywords?corpname=parlamint50_xx_en&amp;tab=advanced&amp;alnum=0&amp;k_attr=usas_glosses&amp;k_itemsPerPage=200&amp;ktab=keywords&amp;n_itemsPerPage=50&amp;ref_corpname=parlamint50_xx_en&amp;ref_usesubcorp=macroeconomics_F&amp;showavgstar=0&amp;showcounts=0&amp;showdocf=0&amp;showarf=0&amp;showaldf=0&amp;showreldocf=0&amp;showrelfrq=0&amp;showresults=1&amp;showscores=0&amp;showwikisearch=0&amp;t_itemsPerPage=50&amp;usekeywords=1&amp;usengrams=0&amp;usesubcorp=macroeconomics_M&amp;useterms=0&amp;w_itemsPerPage=50&amp;include_nonwords=0">the key semantic domains for the <hi rend="italic">macroeconomics_M</hi> subcorpus</ref>, simply click the blue button with arrows (Figure
                               50). Once you get the results, download this list as well.
-                        <figure xml:id="figure50" rend="imageviewer2">
+                        <figure xml:id="figure50" rend="imageviewer2a">
                                  <graphic url="image53.png"/>
                                  <graphic url="image53-normal.png"/>
                                  <head>Figure 50. Press this button to change the focus and reference
@@ -3772,7 +3772,7 @@
                            the three dots next to the number of text types in the top left corner.
                            To change your search criteria, click the far-left icon in the top
                            horizontal toolbar. (Figure 64).
-                     <figure xml:id="figure64" rend="imageviewer3">
+                     <figure xml:id="figure64" rend="imageviewer5">
                               <graphic url="image67.png"/>
                               <graphic url="image67-normal.png"/>
                               <head>Figure 64. Proceeding with a simple concordance query and limiting
@@ -3782,7 +3782,7 @@
                         <item>Alternatively, you can opt for a CQL search by clicking the
                            Concordance icon on the vertical menu bar, selecting Advanced search
                            option and the CQL query type in the drop-down menu (Figure 65).
-                     <figure xml:id="figure65" rend="imageviewer3">
+                     <figure xml:id="figure65" rend="imageviewer5">
                               <graphic url="image68.png"/>
                               <graphic url="image68-normal.png"/>
                               <head>Figure 65. Starting a CQL concordance query.</head>
@@ -3805,7 +3805,7 @@
                                  <hi rend="italic">Lowercase
                            version</hi>
                               </ref> for more detail). </p>
-                           <figure xml:id="figure66" rend="imageviewer">
+                           <figure xml:id="figure66" rend="imageviewer5">
                               <graphic url="image69.png"/>
                               <graphic url="image69-normal.png"/>
                               <head>Figure 66. Running a complex concordance query.</head>
@@ -3814,7 +3814,7 @@
                         <item>In fact, you can also <hi rend="bold">combine</hi> the CQL format for
                            searches of lexical (and grammatical) structures with metadata
                            limitations activated through the Text type selector (Figure 67).
-                     <figure xml:id="figure67" rend="imageviewer">
+                     <figure xml:id="figure67" rend="imageviewer5">
                               <graphic url="image70.png"/>
                               <graphic url="image70-normal.png"/>
                               <head>Figure 67. Combining the CQL format with metadata selections in search
@@ -4101,7 +4101,7 @@
                            towards positive sentences and a generally more balanced distribution of
                            positive and negative sentences containing EU references compared with
                            their counterparts.</p>
-                        <table xml:id="table9" type="table">
+                        <!--<table xml:id="table9" type="table">
                            <head>Table 9. Relative frequencies of EU-related mentions in positively
                               and negatively annotated sentences by representatives of the selected
                               UK parliamentary parties before and after Brexit.</head>
@@ -4176,7 +4176,14 @@
                               <cell style="text-align: right;">66.11</cell>
                               <cell style="text-align: right;">0.80</cell>
                            </row>
-                        </table>
+                        </table>-->
+                        <figure type="table" xml:id="table9" rend="imageviewer_table" >
+                           <graphic url="table9.png"/>
+                           <graphic url="table9-normal.png"/>
+                           <head>Table 9. Relative frequencies of EU-related mentions in positively
+                              and negatively annotated sentences by representatives of the selected
+                              UK parliamentary parties before and after Brexit.</head>
+                        </figure>
                         <p style="text-align:justify" xml:id="DispatchBox-p-212">That said, it remains uncertain whether the
                            expressed sentiment is directed at the EU itself or, for example, at the
                            UK’s withdrawal from it. This is because sentiment annotations applied at
@@ -4224,12 +4231,12 @@
                            the pop-out icon to open them in a new page (Figure 77). Alternatively,
                            you can tick the relevant item and click <hi rend="italic">Selected
                               or</hi> use the corresponding pop-out icon (Figure 78). 
-                     <figure xml:id="figure77" rend="imageviewer2">
+                     <figure xml:id="figure77" rend="imageviewer3">
                               <graphic url="image80.png"/>
                               <graphic url="image80-normal.png"/>
                               <head>Figure 77. Opening concordance lines.</head>
                            </figure>
-                           <figure xml:id="figure78" rend="imageviewer2">
+                           <figure xml:id="figure78" rend="imageviewer3">
                               <graphic url="image81.png"/>
                               <graphic url="image81-normal.png"/>
                               <head>Figure 78. An alternative way of opening concordance lines.</head>
@@ -4240,13 +4247,13 @@
                            (Figure 79) or alternatively filtered by party name via the Filter page
                            (Figure 80). </item>
                      </list>
-                     <figure xml:id="figure79" rend="imageviewer">
+                     <figure xml:id="figure79" rend="imageviewer5">
                         <graphic url="image82.png"/>
                         <graphic url="image82-normal.png"/>
                         <head>Figure 79. Grouping the selected concordance lines via the Frequency
                            page. </head>
                      </figure>
-                     <figure xml:id="figure80" rend="imageviewer">
+                     <figure xml:id="figure80" rend="imageviewer5">
                         <graphic url="image83.png"/>
                         <graphic url="image83-normal.png"/>
                         <head>Figure 80. Filtering the selected concordance lines by party name via
@@ -4267,7 +4274,7 @@
                            consequences of Brexit for Scotland. In these examples, the EU is framed
                            as a guarantor of rights and quality, and its absence is associated with
                            tangible harm to Scottish interests. </p>
-                        <figure xml:id="figure81" rend="imageviewer2">
+                        <figure xml:id="figure81" rend="imageviewer5">
                            <graphic url="image84.png"/>
                            <graphic url="image84-normal.png"/>
                            <head>Figure 81. Concordance lines with the -0.043 sentiment value
@@ -4284,7 +4291,7 @@
                            leans towards scepticism and strategic distancing. Conservative speakers
                            also take the opportunity to criticise the Scottish Government for
                            “waiting and following the European Union.”</p>
-                        <figure xml:id="figure82" rend="imageviewer">
+                        <figure xml:id="figure82" rend="imageviewer5">
                            <graphic url="image85.png"/>
                            <graphic url="image85-normal.png"/>
                            <head>Figure 82. Concordance lines with the -0.043 sentiment value
@@ -4403,14 +4410,14 @@
                            criticise predominantly the SNP, but also members of some other
                            parliamentary parties, for expressing a desire to rejoin the EU (Figure
                            88). </p>
-                        <figure xml:id="figure87" rend="imageviewer2">
+                        <figure xml:id="figure87" rend="imageviewer5">
                            <graphic url="image90.png"/>
                            <graphic url="image90-normal.png"/>
                            <head>Figure 87. Concordance lines containing co-occurrences of rejoin
                               and the EU/European Union in positively annotated sentences uttered by
                               SNP members. </head>
                         </figure>
-                        <figure xml:id="figure88" rend="imageviewer">
+                        <figure xml:id="figure88" rend="imageviewer5">
                            <head>Figure 88. Concordance lines containing co-occurrences of rejoin
                               and the EU/European Union in negatively annotated sentences uttered by
                               Conservative Party members.</head>
@@ -4430,7 +4437,7 @@
                            betrayal, and cultural loss. The collocate <hi rend="italic">drag</hi>
                            thus functions as a rhetorical anchor for grievance, reinforcing the
                            SNP’s broader argument for autonomy and re-engagement with the EU.</p>
-                        <figure xml:id="figure89" rend="imageviewer">
+                        <figure xml:id="figure89" rend="imageviewer5">
                            <graphic url="image92.png"/>
                            <graphic url="image92-normal.png"/>
                            <head>Figure 89. Concordance lines containing the lemma drag co-occurring
@@ -4442,7 +4449,7 @@
                            according to the 6-level scale (<hi rend="bold">s.senti_6</hi>). As seen
                            in Figure 90 below, 13 out of 14 instances containing the lemma <hi rend="italic">drag</hi> are annotated as negative and only one as
                            mixed negative. </p>
-                        <figure xml:id="figure90" rend="imageviewer">
+                        <figure xml:id="figure90" rend="imageviewer5">
                            <graphic url="image93.png"/>
                            <graphic url="image93-normal.png"/>
                            <head>Figure 90. Sentiment information regarding the selected sentences
@@ -4461,7 +4468,7 @@
                            annotated sentences uttered by Conservative Party members in the
                            post-Brexit period is relatively evenly distributed between positive and
                            mixed positive according to the 6-level scale (Figure 91). </p>
-                        <figure xml:id="figure91" rend="imageviewer">
+                        <figure xml:id="figure91" rend="imageviewer5">
                            <graphic url="image94.png"/>
                            <graphic url="image94-normal.png"/>
                            <head>Figure 91. Sentiment information regarding the selected sentences
@@ -4486,7 +4493,7 @@
                            Figure 92 below (see also <ref target="#ch02.2.4.4">concordance-based
                               subcorpus creation</ref>). </item>
                      </list>
-                     <figure xml:id="figure92" rend="imageviewer">
+                     <figure xml:id="figure92" rend="imageviewer5">
                         <graphic url="image95.png"/>
                         <graphic url="image95-normal.png"/>
                         <head>Figure 92. Creating a subcorpus from selected positively annotated
@@ -4625,7 +4632,6 @@
                   <gloss> is the process of adding interpretative linguistic or extralinguistic
                      information to a corpus.</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Collocation">
                      <hi rend="bold">Collocation </hi>
@@ -4634,7 +4640,6 @@
                      and those words, which appear together with it more often than would be
                      expected by chance.</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Concordance">
                      <hi rend="bold">Concordance</hi>
@@ -4642,7 +4647,6 @@
                   <gloss> is a machine-generated display of all occurrences of a search unit in a
                      corpus, shown with surrounding context for each instance.</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Concordance_line">
                      <hi rend="bold">Concordance line</hi>
@@ -4651,7 +4655,6 @@
                      phrase (the node) together with a limited amount of its surrounding context.
                   </gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Concordancer">
                      <hi rend="bold">Concordancer</hi>
@@ -4660,7 +4663,6 @@
                      collection of texts (a corpus) and is commonly equipped with additional
                      analytical functions.</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Corpus_Query_Language_CQL">
                      <hi rend="bold">Corpus Query Language
@@ -4671,7 +4673,6 @@
                      conditions. <hi rend="italic">Regular expressions</hi> can be used in CQL to
                      match specific values. </gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Frequency_list">
                      <hi rend="bold">Frequency list</hi>
@@ -4680,7 +4681,6 @@
                      values of a metadata category in focus) with counts of their
                      occurrences.</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Key_Word_in_Context_KWIC">
                      <hi rend="bold">Key Word in Context
@@ -4689,7 +4689,6 @@
                   <gloss> is a concordance format where the search term is centred, with preceding
                      and following context shown in side columns.</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Keyword">
                      <hi rend="bold">Keyword </hi>
@@ -4697,7 +4696,6 @@
                   <gloss>is a word that occurs significantly more often in the <hi rend="italic">focus corpus</hi> than in some <hi rend="italic">reference
                      corpus</hi>.</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Lemma">
                      <hi rend="bold">Lemma</hi>
@@ -4706,7 +4704,6 @@
                      dictionary) that encompasses all the inflected and suppletive forms of the same
                      base word. For instance, <hi rend="italic">go, goes, going, went</hi> and <hi rend="italic">gone</hi> are the wordforms of the lemma <hi rend="smallcaps">go</hi>.</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Lemmatisation">
                      <hi rend="bold">Lemmatisation</hi>
@@ -4714,7 +4711,6 @@
                   <gloss> is the process of assigning each token in the corpus to its lemma with the
                      help of a tool called a lemmatiser. </gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Named_entity">
                      <hi rend="bold">Named entity </hi>
@@ -4727,7 +4723,6 @@
                      recognising “United Nations” as an organisation or “Paris” as a
                      location.</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Normalisation_or_frequency_normalisation">
                      <hi rend="bold">Normalisation, or frequency normalisation, </hi>
@@ -4738,7 +4733,6 @@
                      which refers to ascribing the canonical (standardised) form of a word to its
                      various spoken or written variants in a corpus.</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Regular_expression">
                      <hi rend="bold">Regular expression</hi>
@@ -4747,7 +4741,6 @@
                      match strings sharing common structures, allowing users to find items,
                      including tokens or tags, that start, end, or contain preset sequences.</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Relative_density">
                      <hi rend="bold">Relative density</hi>
@@ -4759,7 +4752,6 @@
                      indicate that the item is more typical or characteristic of that text
                      type.</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Relative_frequency">
                      <hi rend="bold">Relative frequency
@@ -4769,7 +4761,6 @@
                      tokens in a corpus or a subcorpus, multiplied by a constant (e.g., 1,000,000)
                      to express results on a common scale.</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Statistical_measure">
                      <hi rend="bold">Statistical measure
@@ -4785,7 +4776,6 @@
                      the distribution of words or phrases throughout the corpus (see, e.g., Brezina,
                      2018 for more details on statistics in corpus linguistics).</gloss>
                </item>
-               <lb/>
                <item>
                   <term xml:id="Token">
                      <hi rend="bold">Token</hi>
@@ -4794,7 +4784,6 @@
                      wordform, a punctuation mark, a digit, or another element between spaces,
                      depending on the tokeniser used in a concordancer.</gloss>
                </item>
-               <lb/>
             </list>
          </div>
          <div type="appendix" xml:id="acknw" xml:lang="en">
