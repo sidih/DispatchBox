@@ -3,7 +3,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>From the Dispatch Box: unlocking the potential of ParlaMint through noSketch
+            <title>From the Dispatch Box: Unlocking the Potential of ParlaMint Through noSketch
                Engine and TEITOK</title>
             <author>
                <forename>Kristina</forename>
@@ -107,7 +107,7 @@
          <titlePage>
             <docTitle>
                <titlePart xml:lang="en">From the Dispatch Box:</titlePart>
-               <titlePart xml:lang="en">unlocking the potential of ParlaMint through noSketch Engine
+               <titlePart xml:lang="en">Unlocking the Potential of ParlaMint Through noSketch Engine
                   and TEITOK</titlePart>
             </docTitle>
             <docAuthor><forename>Kristina</forename> <surname>Pahor de Maiti Tekavčič</surname>, Faculty of Arts University of Ljubljana,
@@ -142,7 +142,7 @@
          </divGen>-->
          <div type="preface" xml:id="preface_1" xml:lang="en">
             <head xml:id="DispatchBox-head-6">Introduction</head>
-            <p style="text-align:justify" xml:id="DispatchBox-p-5">This digital textbook aims to provide a step-by step
+            <p style="text-align:justify" xml:id="DispatchBox-p-5">This digital textbook aims to provide a step-by-step
                introduction to using parliamentary proceedings as a datasource fit for
                multidisciplinary research questions. To this end, it specifically uses the ParlaMint
                corpora – a cluster of 29 corpora containing records of plenary sessions from
